@@ -270,6 +270,7 @@
   line-height: 25px;
   font-size: 18px;
   color: #fff;
+  margin: 0;
 }
 .footer__column_content_info {
   display: inline-block;
