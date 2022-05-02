@@ -20,14 +20,14 @@
 }
 .logo {
   display: flex;
+  width: 228px;
+  height: 32px;
 }
 
 .logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
-  width: 228px;
-  height: 32px;
   z-index: 5;
 }
 
@@ -36,7 +36,7 @@
   align-items: center;
   padding-left: 64px;
   z-index: 5;
-  width: 730px;
+  max-width: 730px;
   font-weight: bold;
   line-height: 96px;
   font-size: 102px;
@@ -58,6 +58,9 @@
   color: #2f80ed;
   text-decoration: none;
 }
+.header__link:hover {
+  opacity: 0.6;
+}
 
 .header__main-illustration {
   position: absolute;
@@ -66,8 +69,7 @@
   z-index: 4;
   width: 765px;
   height: 608px;
-  background-size: cover;
-  background-repeat: no-repeat;
+  object-fit: cover;
 }
 .header__square-pic {
   position: absolute;
@@ -100,7 +102,6 @@
   min-width: 784px;
   width: 80%;
   display: grid;
-  grid-template-rows: auto auto auto;
   gap: 30px;
 }
 .two-columns__paragraph {
@@ -109,9 +110,7 @@
   font-weight: normal;
   margin: 0;
 }
-.span-accent {
-  line-height: 34px;
-  font-size: 24px;
+.two-columns__span-accent {
   font-weight: bold;
 }
 .section-title {
@@ -161,9 +160,9 @@
 }
 .feynman {
   position: relative;
-  height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
-  z-index: -2;
+  z-index: 0;
 }
 .feynman__title {
   padding-top: 100px;
@@ -196,20 +195,23 @@
   font-weight: normal;
   position: absolute;
   right: 48px;
-  top: auto;
+  top: 50%;
   color: #2f80ed;
   text-decoration: none;
+  z-index: 1;
+}
+.feynman__link:hover {
+  opacity: 0.6;
 }
 .kaufman {
   background-color: #1f1f1f;
   overflow: hidden;
   position: relative;
-  z-index: -2;
+  z-index: 0;
 }
 .section-title_theme_dark {
   color: #fff;
   padding-top: 90px;
-  width: 60%;
 }
 .section-subtitle_theme_dark {
   color: #fff;
@@ -279,6 +281,9 @@
   padding-bottom: 16px;
   flex-direction: column;
   display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 .footer__column-heading {
   color: #fff;
@@ -302,4 +307,7 @@
   line-height: 30px;
   text-decoration: none;
   align-items: center;
+}
+.footer__column-link:hover {
+  opacity: 0.6;
 }
